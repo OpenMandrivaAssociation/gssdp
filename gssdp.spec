@@ -1,6 +1,6 @@
 %define name gssdp
 %define version 0.4.2
-%define release %mkrel 1
+%define release %mkrel 2
 %define major 0
 %define libname %mklibname %{name}  %{major}
 %define develname %mklibname %{name} -d
@@ -15,7 +15,7 @@ Group: Development/Other
 Url: http://www.gupnp.org/sources/gssdp/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libsoup-2.2-devel
-BuildRequires: libglade2-devel
+BuildRequires: glade2.0_0-devel
 
 %description
 GSSDP implements resource discovery and announcement over SSDP
