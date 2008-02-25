@@ -14,7 +14,8 @@ License: GPL
 Group: Development/Other
 Url: http://www.gupnp.org/sources/gssdp/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: libsoup-2.2-devel glade-devel
+BuildRequires: libsoup-2.2-devel
+BuildRequires: libglade2-devel
 
 %description
 GSSDP implements resource discovery and announcement over SSDP
