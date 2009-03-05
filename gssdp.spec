@@ -4,13 +4,13 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.6.3
+Version:	0.6.4
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
 Source0:	http://www.gupnp.org/sources/gssdp/%{name}-%{version}.tar.gz
-Patch0:		gssdp-0.6.3-fix-str-fmt.patch
+#Patch0:		gssdp-0.6.3-fix-str-fmt.patch
 BuildRequires:	libsoup-devel
 BuildRequires:	libglade2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -40,7 +40,7 @@ applications which will use gssdp.
 
 %prep
 %setup -q
-%patch0
+#%patch0
 
 %build
 %configure2_5x
