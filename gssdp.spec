@@ -1,18 +1,17 @@
-%define major 1
+%define major 2
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.6.4
-Release:	%mkrel 2
+Version:	0.7.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
 Source0:	http://www.gupnp.org/sources/gssdp/%{name}-%{version}.tar.gz
 #Patch0:		gssdp-0.6.3-fix-str-fmt.patch
 BuildRequires:	libsoup-devel
-BuildRequires:	libglade2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -67,6 +66,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS README ChangeLog NEWS
 %{_bindir}/gssdp-device-sniffer
+%{_datadir}/%{name}/*.ui
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -79,5 +79,4 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %{_libdir}/*.la
 %{_libdir}/*.a
-%{_datadir}/%{name}/*glade
 %{_datadir}/gtk-doc/html/*
