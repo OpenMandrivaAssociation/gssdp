@@ -4,7 +4,7 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.7.0
+Version:	0.7.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
