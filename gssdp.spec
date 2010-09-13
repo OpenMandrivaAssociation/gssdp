@@ -5,7 +5,7 @@
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
 Version:	0.7.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
