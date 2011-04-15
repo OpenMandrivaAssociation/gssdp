@@ -1,11 +1,12 @@
+%define api 1.0
 %define major 2
-%define libname %mklibname %{name} %{major}
+%define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.7.2
-Release:	%mkrel 4
+Version:	0.10.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
@@ -23,6 +24,7 @@ Summary:	Main library for gssdp
 Group:		System/Libraries
 Provides:	%{name} = %{version}-%{release}
 Obsoletes:	%{mklibname gssdp 1} < 0.6.1
+Obsoletes:	%{mklibname gssdp 2} < 0.10.0
 Conflicts: gir-repository < 0.6.5-11
 
 %description -n %{libname}
