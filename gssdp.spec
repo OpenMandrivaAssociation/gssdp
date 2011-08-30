@@ -1,16 +1,16 @@
 %define api 1.0
-%define major 2
+%define major 3
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.10.0
+Version:	0.12.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
-Source0:	http://www.gupnp.org/sources/gssdp/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 BuildRequires:	libsoup-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	gobject-introspection-devel
