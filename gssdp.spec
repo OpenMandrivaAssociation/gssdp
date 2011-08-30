@@ -6,7 +6,7 @@
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
 Version:	0.12.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
@@ -26,6 +26,7 @@ Provides:	%{name} = %{version}-%{release}
 Obsoletes:	%{mklibname gssdp 1} < 0.6.1
 Obsoletes:	%{mklibname gssdp 2} < 0.10.0
 Conflicts: gir-repository < 0.6.5-11
+Conflicts: %mklibname %{name} %{api} 2
 
 %description -n %{libname}
 This package contains the library needed to run programs dynamically
