@@ -6,7 +6,7 @@
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
 Version:	0.12.0
-Release:	%mkrel 2
+Release:	3
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
@@ -14,7 +14,6 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.xz
 BuildRequires:	libsoup-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	gobject-introspection-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 GSSDP implements resource discovery and announcement over SSDP.
@@ -22,7 +21,6 @@ GSSDP implements resource discovery and announcement over SSDP.
 %package -n %{libname}
 Summary:	Main library for gssdp
 Group:		System/Libraries
-Provides:	%{name} = %{version}-%{release}
 Obsoletes:	%{mklibname gssdp 1} < 0.6.1
 Obsoletes:	%{mklibname gssdp 2} < 0.10.0
 Conflicts: gir-repository < 0.6.5-11
@@ -48,40 +46,28 @@ applications which will use gssdp.
 
 %build
 export CFLAGS="%{optflags} -fPIC"
-%configure2_5x
+%configure2_5x \
+	--disable-static
+
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
+find %{buildroot} -name '*.la' | xargs rm
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS README ChangeLog NEWS
 %{_bindir}/gssdp-device-sniffer
 %{_datadir}/%{name}/*.ui
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/*.so.%{major}*
 %_libdir/girepository-1.0/GSSDP-1.0.typelib
 
 %files -n %{develname}
-%defattr(-,root,root)
 %{_libdir}/pkgconfig/gssdp*.pc
 %{_includedir}/gssdp-1.0/lib%{name}/*.h
 %{_libdir}/*.so
-%{_libdir}/*.la
-%{_libdir}/*.a
 %{_datadir}/gtk-doc/html/*
 %_datadir/gir-1.0/GSSDP-1.0.gir
