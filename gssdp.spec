@@ -61,6 +61,7 @@ export CFLAGS="%{optflags} -fPIC"
 %make
 
 %install
+%makeinstall_std
 find %{buildroot} -name '*.la' | xargs rm -f
 
 %files
