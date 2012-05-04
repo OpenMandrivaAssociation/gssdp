@@ -61,7 +61,7 @@ export CFLAGS="%{optflags} -fPIC"
 %make
 
 %install
-find %{buildroot} -name '*.la' | xargs rm
+find %{buildroot} -name '*.la' | xargs rm -f
 
 %files
 %doc AUTHORS README ChangeLog NEWS
