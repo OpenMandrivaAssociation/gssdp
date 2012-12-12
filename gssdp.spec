@@ -8,13 +8,13 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.12.2
+Version:	0.13.2
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-BuildRequires:	pkgconfig(gobject-introspection)
+BuildRequires:	gobject-introspection-devel
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
 
