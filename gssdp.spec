@@ -70,7 +70,7 @@ export CFLAGS="%{optflags} -fPIC"
 %{_datadir}/%{name}/*.ui
 
 %files -n %{libname}
-%{_libdir}/libgssdp.so.%{major}*
+%{_libdir}/libgssdp-%{api}.so.%{major}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/GSSDP-%{api}.typelib
