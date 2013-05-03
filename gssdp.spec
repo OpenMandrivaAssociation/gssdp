@@ -1,10 +1,10 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api 1.0
-%define major 3
-%define libname %mklibname %{name} %{api} %{major}
-%define girname %mklibname %{name}-gir %{api}
-%define devname %mklibname %{name} -d
+%define api	1.0
+%define major	3
+%define libname	%mklibname %{name} %{api} %{major}
+%define girname	%mklibname %{name}-gir %{api}
+%define devname	%mklibname %{name} -d
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
@@ -14,7 +14,8 @@ License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-BuildRequires:	gobject-introspection-devel
+
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
 
@@ -62,7 +63,6 @@ export CFLAGS="%{optflags} -fPIC"
 
 %install
 %makeinstall_std
-find %{buildroot} -name '*.la' | xargs rm -f
 
 %files
 %doc AUTHORS README ChangeLog NEWS
@@ -70,7 +70,7 @@ find %{buildroot} -name '*.la' | xargs rm -f
 %{_datadir}/%{name}/*.ui
 
 %files -n %{libname}
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libgssdp.so.%{major}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/GSSDP-%{api}.typelib
