@@ -8,7 +8,7 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	0.13.2
+Version:	0.14.3
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -81,4 +81,5 @@ export CFLAGS="%{optflags} -fPIC"
 %{_libdir}/pkgconfig/gssdp*.pc
 %{_datadir}/gtk-doc/html/*
 %{_datadir}/gir-1.0/GSSDP-%{api}.gir
+%{_datadir}/vala/vapi/*
 
