@@ -16,7 +16,7 @@ Url:		http://www.gupnp.org/sources/gssdp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
-BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
 BuildRequires:  vala-tools
 
