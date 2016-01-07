@@ -1,8 +1,9 @@
 removed_sources:
   gssdp-0.13.2.tar.xz: 3e463c3ab284b665d2376f39a0144898ad9705df
   gssdp-0.14.10.tar.xz: 0fb93418386df1e12fc1add35d92039f773f567d
+  gssdp-0.14.11.tar.xz: e1cd94c7e33252aeccf5b534a7a32e47d7743e5a
   gssdp-0.14.3.tar.xz: 74f554de2a4a4b34c85494fa2a1d83c445dbf5c4
   gssdp-0.14.5.tar.xz: 74dd6f598abfdfc12858f1101e3e8a60e1548f22
   gssdp-0.14.6.tar.xz: 6d9bfa353eb9de8baaf5e6488b18a00ccf9372e6
 sources:
-  gssdp-0.14.11.tar.xz: e1cd94c7e33252aeccf5b534a7a32e47d7743e5a
+  gssdp-0.14.13.tar.xz: 373d3c0e886f5a5daf8cfa4b4e49db32b8b2c2c8
