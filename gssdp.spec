@@ -2,15 +2,15 @@
 
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api	1.0
-%define major	3
+%define api	1.2
+%define major	0
 %define libname	%mklibname %{name} %{api} %{major}
 %define girname	%mklibname %{name}-gir %{api}
 %define devname	%mklibname %{name} -d
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	1.0.3
+Version:	1.1.3
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libsoup-2.4)
 BuildRequires:  vala-tools
+BuildRequires:  meson
 
 %description
 GSSDP implements resource discovery and announcement over SSDP.
@@ -59,18 +60,16 @@ applications which will use gssdp.
 
 %build
 export CFLAGS="%{optflags} -fPIC"
-%configure2_5x \
-	--disable-static
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %files
 %doc AUTHORS README ChangeLog NEWS
 %{_bindir}/gssdp-device-sniffer
-%{_datadir}/%{name}/*.ui
+#%{_datadir}/%{name}/*.ui
 
 %files -n %{libname}
 %{_libdir}/libgssdp-%{api}.so.%{major}*
@@ -82,7 +81,6 @@ export CFLAGS="%{optflags} -fPIC"
 %{_includedir}/gssdp-%{api}/lib%{name}/*.h
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/gssdp*.pc
-%{_datadir}/gtk-doc/html/*
 %{_datadir}/gir-1.0/GSSDP-%{api}.gir
 %{_datadir}/vala/vapi/*
 
