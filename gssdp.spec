@@ -10,7 +10,7 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	1.2.3
+Version:	1.3.0
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -18,7 +18,7 @@ Url:		http://www.gupnp.org/sources/gssdp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gssdp/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
-BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(libsoup-2.4)
 BuildRequires:  vala-tools
 BuildRequires:  meson
@@ -67,7 +67,7 @@ export CFLAGS="%{optflags} -fPIC"
 %meson_install
 
 %files
-%doc AUTHORS README ChangeLog NEWS
+%doc AUTHORS README.md NEWS
 %{_bindir}/gssdp-device-sniffer
 #%{_datadir}/%{name}/*.ui
 
