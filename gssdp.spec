@@ -67,7 +67,7 @@ export CFLAGS="%{optflags} -fPIC"
 %meson_install
 
 %files
-%doc AUTHORS README ChangeLog NEWS
+%doc AUTHORS README.md NEWS
 %{_bindir}/gssdp-device-sniffer
 #%{_datadir}/%{name}/*.ui
 
