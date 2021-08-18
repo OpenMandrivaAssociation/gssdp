@@ -69,6 +69,7 @@ export CFLAGS="%{optflags} -fPIC"
 
 %files
 %doc AUTHORS README.md NEWS
+%doc %{_datadir}/doc/gssdp-1.2/reference/GSSDP/
 %{_bindir}/gssdp-device-sniffer
 #%{_datadir}/%{name}/*.ui
 
