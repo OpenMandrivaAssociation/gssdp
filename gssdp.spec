@@ -20,6 +20,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gssdp/%{url_ver}/%{name}-%{versi
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:  vala-tools
 BuildRequires:  meson
 
