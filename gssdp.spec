@@ -10,7 +10,7 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	1.3.1
+Version:	1.6.0
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -19,7 +19,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gssdp/%{url_ver}/%{name}-%{versi
 
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk4)
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:  vala-tools
 BuildRequires:  meson
