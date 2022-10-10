@@ -2,7 +2,7 @@
 
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api	1.2
+%define api	1.6
 %define major	0
 %define libname	%mklibname %{name} %{api} %{major}
 %define girname	%mklibname %{name}-gir %{api}
@@ -10,7 +10,7 @@
 
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
-Version:	1.3.1
+Version:	1.6.0
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
@@ -19,7 +19,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/gssdp/%{url_ver}/%{name}-%{versi
 
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk4)
-BuildRequires:	pkgconfig(libsoup-2.4)
+BuildRequires:	pkgconfig(libsoup-3.0)
 BuildRequires:  pkgconfig(gi-docgen)
 BuildRequires:  vala-tools
 BuildRequires:  meson
@@ -69,7 +69,7 @@ export CFLAGS="%{optflags} -fPIC"
 
 %files
 %doc AUTHORS README.md NEWS
-%doc %{_datadir}/doc/gssdp-1.2/reference/GSSDP/
+#doc %{_datadir}/doc/gssdp-1.2/reference/GSSDP/
 %{_bindir}/gssdp-device-sniffer
 #%{_datadir}/%{name}/*.ui
 
