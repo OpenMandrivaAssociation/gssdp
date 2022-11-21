@@ -61,7 +61,9 @@ applications which will use gssdp.
 
 %build
 export CFLAGS="%{optflags} -fPIC"
-%meson
+%meson \
+        -Dexamples=false \
+        -Dmanpages=false
 %meson_build
 
 %install
