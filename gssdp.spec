@@ -11,7 +11,7 @@
 Summary:	Implements resource discovery and announcement over SSDP
 Name:		gssdp
 Version:	1.6.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.gupnp.org/sources/gssdp/
