@@ -14,7 +14,7 @@ Version:	1.6.3
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
-Url:		http://www.gupnp.org/sources/gssdp/
+Url:		https://www.gupnp.org/sources/gssdp/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gssdp/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
